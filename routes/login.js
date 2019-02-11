@@ -10,9 +10,25 @@ router.get('/', function(req, res, next) {
     res.render('./Pages/login',
                 {
                     url: url,
-                    title: config.title+'LOGIN'
+                    title: config.title,
+                    title_page: 'LOGIN'
                 }    
             );
 });
+
+router.get('/logout', (req, res, next) => {
+      if (req.session) {
+          // delete session object
+          req.session.destroy(function(err) {
+            if(err) {
+              return next(err);
+            } else {
+              return res.redirect('/');
+            }
+          });
+        }
+      
+  })
+
 
 module.exports = router;

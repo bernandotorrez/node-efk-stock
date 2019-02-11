@@ -47,7 +47,7 @@
                             <li class="divider"></li>
     
                             <li>
-                                <a href="/logout">
+                                <a href="/login/logout">
                                     <i class="ace-icon fa fa-power-off"></i>
                                     Logout
                                 </a>
@@ -100,7 +100,7 @@
                 </div>
             </div><!-- /.sidebar-shortcuts -->
             <ul class="nav nav-list">
-                    <% if(url=='/') { %>
+                    <% if(url=='/' || url=='/index') { %>
                         <li class="active">
                     <% } else { %>
                         <li class="">
@@ -118,7 +118,7 @@
                 <% } else { %>
                     <li class="">
                 <% } %> 
-                    <a href="/admin/profil">
+                    <a href="/admin/profile">
                         <i class="menu-icon fa fa-user-circle-o"></i>
                         <span class="menu-text"> Profil </span>
                     </a>

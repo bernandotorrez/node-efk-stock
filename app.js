@@ -8,7 +8,6 @@ var flash = require('express-flash');
 var session = require('express-session');
 // Initial Route
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var apiRouter = require('./routes/api');
 var adminRouter = require('./routes/admin');
@@ -38,7 +37,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/api', apiRouter);
 app.use('/admin', adminRouter);

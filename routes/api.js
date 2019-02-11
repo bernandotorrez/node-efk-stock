@@ -23,6 +23,7 @@ router.post('/login', (req, res) => {
         if(!result) {
           res.status(200).send({status: 'Gagal', result: null})
         } else {
+          req.session.level = result.level;
           res.status(200).send({status: 'Success', result: result})
         }
       })

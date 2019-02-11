@@ -1,5 +1,5 @@
 var constants = {
-    title: 'EFK STOCK - ',
+    title: 'EFK STOCK ',
     url: 'http://localhost:3001'
 }
 
