@@ -27,7 +27,7 @@
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
 
                         <span class="user-info">
-                            <small>Admin, </small>
+                            <small>Welcome, </small>
                             <%= nama %>
                         </span>
 
@@ -105,12 +105,17 @@
             </div>
         </div><!-- /.sidebar-shortcuts -->
         <ul class="nav nav-list">
+
+
+            <!-- Halaman index -->
+
             <% if(url=='/' || url=='/index') { %>
             <li class="active">
                 <% } else { %>
             <li class="">
                 <% } %>
-                <a href="/admin">
+
+                <a href="/home">
                     <i class="menu-icon fa fa-home"></i>
                     <span class="menu-text"> Home </span>
                 </a>
@@ -118,12 +123,17 @@
                 <b class="arrow"></b>
             </li>
 
+            <!-- Halaman index -->
+
+
+            <!-- Halaman profile -->
+
             <% if(url=='/profil') { %>
             <li class="active">
                 <% } else { %>
             <li class="">
                 <% } %>
-                <a href="/admin/profile">
+                <a href="/home/profile">
                     <i class="menu-icon fa fa-user-circle-o"></i>
                     <span class="menu-text"> Profil </span>
                 </a>
@@ -131,117 +141,54 @@
                 <b class="arrow"></b>
             </li>
 
-            <% if(url=='/akses' || url=='/tipe_er' || url=='/master_checker' || url=='/master_validator'
-                        || url=='/checker' || url=='/departemen') { %>
-            <li class="active open">
+            <!-- Halaman profile -->
+
+            <% if(url=='/stock') { %>
+            <li class="active">
                 <% } else { %>
             <li class="">
                 <% } %>
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-cog"></i>
-                    <span class="menu-text"> Admin </span>
-
-                    <b class="arrow fa fa-angle-down"></b>
+                <a href="/home/stock">
+                    <i class="menu-icon fa fa-search"></i>
+                    <span class="menu-text"> Stock </span>
                 </a>
 
                 <b class="arrow"></b>
-
-                <ul class="submenu">
-
-                    <% if(url=='/akses') { %>
-                    <li class="active">
-                        <% } else { %>
-                    <li class="">
-                        <% } %>
-                        <a href="/admin/akses">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Hak Akses
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <% if(url=='/tipe_er') { %>
-                    <li class="active">
-                        <% } else { %>
-                    <li class="">
-                        <% } %>
-                        <a href="/admin/tipe_er">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Tipe ER
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <!-- Menu for Master Checker -->
-                    <% if(url=='/master_checker') { %>
-                    <li class="active">
-                        <% } else { %>
-                    <li class="">
-                        <% } %>
-                        <a href="/admin/master_checker">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Master Checker
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                    <!-- Menu for Master Checker -->
-
-                    <!-- Menu for Master Validator -->
-                    <% if(url=='/master_validator') { %>
-                    <li class="active">
-                        <% } else { %>
-                    <li class="">
-                        <% } %>
-                        <a href="/admin/master_validator">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Master Validator
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <!-- Menu for Master Validator -->
-
-
-                    <!-- Menu for Master Checker -->
-                    <% if(url=='/checker') { %>
-                    <li class="active">
-                        <% } else { %>
-                    <li class="">
-                        <% } %>
-                        <a href="/admin/checker">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Checker
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                    <!-- Menu for Master Checker -->
-
-
-                    <!-- Menu for Master Departemen -->
-                    <% if(url=='/departemen') { %>
-                    <li class="active">
-                        <% } else { %>
-                    <li class="">
-                        <% } %>
-                        <a href="/admin/departemen">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Departemen
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-                    <!-- Menu for Master Departemen -->
-                </ul>
             </li>
 
+            <% if(url=='/log') { %>
+            <li class="active">
+                <% } else { %>
+            <li class="">
+                <% } %>
+                <a href="/home/log">
+                    <i class="menu-icon fa fa-file-text"></i>
+                    <span class="menu-text"> Log Stock </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+
+            <% if(url=='/report') { %>
+            <li class="active">
+                <% } else { %>
+            <li class="">
+                <% } %>
+                <a href="/home/report">
+                    <i class="menu-icon fa fa-file-excel-o"></i>
+                    <span class="menu-text"> Report </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+
+        </ul>
+        </li>
+
+
 
         </ul><!-- /.nav-list -->
 
-
-
-        </ul><!-- /.nav-list -->
 
         <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
             <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left"
